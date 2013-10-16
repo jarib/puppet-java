@@ -28,4 +28,9 @@ class java {
     mode    => '0755',
     require => Package['java']
   }
+
+  file { "${boxen::config::envdir}/java_home.sh":
+    source => 'puppet:///modules/java/java_home.sh' ;
+  }
+
 }
